@@ -1,0 +1,44 @@
+.movieDetails-layout{
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: .5rem;
+    background-color: blanchedalmond;
+}
+
+.movieDetails-size{
+    width: 90%;
+    height: 90vh;
+}
+
+.movieDetails-position{
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.movieDetails--img-size{
+    width: 25rem;
+    height: 100%;
+}
+
+.movieDetails--info-layout{
+    padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .movieDetails-size{
+        height: max-content;
+    }
+
+    .movieDetails-layout{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        background-color: blanchedalmond;
+    } 
+
+    .movieDetails--img-size{
+        margin: 0 auto;
+        width: 21rem;
+        height: 35rem;
+    }
+}

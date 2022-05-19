@@ -1,0 +1,7 @@
+.movieList-layout{
+    display: grid;
+    justify-content: flex-start;
+    justify-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}

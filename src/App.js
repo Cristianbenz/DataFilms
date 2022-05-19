@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+
+import Login from "./pages/Login/Index";
+import Lista from "./pages/MoviesList/Index";
+import MovieDetail from "./pages/MovieDetail/Index";
+import Favs from "./pages/Favs/Index";
+
+import { FavContext } from "./contexts/FavsContext";
+import { LoginContext } from "./contexts/LoginContext";
+
+import Header from "./components/Header/Index";
+import Search from "./pages/Search/Index";
+
+import './app.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <LoginContext>
+        <FavContext>
+          <Header />
+          <Routes>
+            <Route element={<Login />} path={"/"} />
+            <Route element={<Lista />} path={"/movies"} />
+            <Route element={<MovieDetail />} path={"/movie"} />
+            <Route element={<Favs />} path={"/favourites"} />
+            <Route element={<Search />} path={'/search'} />
+          </Routes>
+        </FavContext>
+      </LoginContext>
+    </>
   );
 }
 

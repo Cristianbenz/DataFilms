@@ -1,0 +1,16 @@
+.addFavBtn{
+    position: absolute;
+    top: .3rem;
+    right: .3rem;
+    background-color: rgba(250, 235, 215, 0.397);
+    border-radius: 50%;
+    padding: .2rem;
+    cursor: pointer;
+}
+
+.cardi{
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
