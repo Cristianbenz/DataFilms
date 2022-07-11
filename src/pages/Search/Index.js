@@ -13,7 +13,7 @@ export default function Search() {
 
   useEffect(() => {
     axios.get(SEARCH_ENDPOINT).then((res) => setSearchList(res.data.results));
-  }, [SEARCH_ENDPOINT, GET_URL]);
+  });
 
   return (
     <>
