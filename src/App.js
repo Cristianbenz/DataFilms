@@ -11,7 +11,7 @@ import { LoginContext } from "./contexts/LoginContext";
 import Header from "./components/Header/Index";
 import Search from "./pages/Search/Index";
 
-import './app.css'
+import "./app.css"
 
 function App() {
   return (
